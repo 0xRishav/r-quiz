@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Option, Question } from "./data/quiz.types";
+import { quizOne } from "./data/data";
+import Header from "./components/Header";
 
 function App() {
+  const [score, setScore] = useState(0);
+  const getScore = (
+    currentScore: number,
+    question: Question,
+    option: Option
+  ): number => {
+    return option.isRight ? currentScore + question.points : currentScore;
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header username="rishav" score={score} />
+      <button onClick={() => setScore(score + 1)}>Increase Score</button>
+      <button onClick={() => setScore(score - 1)}>Decrease Score</button>
     </div>
   );
 }
