@@ -108,7 +108,7 @@ const QuizPage = ({ quiz }: QuizPropType) => {
   return (
     <div>
       <div className="flex flex-row items-center h-20">
-        <IoIosArrowBack size="1.25rem" />
+        <IoIosArrowBack size="1.25rem" onClick={() => history.push("/")} />
         <div className="ml-4 text-xl font-medium">{quiz.quizName}</div>
       </div>
       <ScrollContainer className="flex overflow-x-scroll overflow-y-hidden justify-start items-center mt-2">
@@ -142,7 +142,7 @@ const QuizPage = ({ quiz }: QuizPropType) => {
       <div className="flex flex-col justify-center">
         {quiz.questions[activeQue - 1].options.map((option, i) => (
           <div
-          key={i}
+            key={i}
             className={
               selectedOption === i
                 ? option.isRight
