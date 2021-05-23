@@ -1,15 +1,18 @@
 import React from "react";
+import { BiMenuAltRight } from "react-icons/bi";
+import { useAuth } from "../contexts/auth-context/authContext";
 
-type HeaderProps = {
-  username: string;
-  score: number;
-};
+function Header() {
+  const { currentUser } = useAuth();
 
-function Header({ username, score }: HeaderProps) {
   return (
     <div>
-      <h1>{username}</h1>
-      <h2>{score}</h2>
+      <div className="flex justify-between items-center h-20">
+        <div className="px-3 py-2.5 bg-green-500 text-white rounded-full">
+          {currentUser?.firstName[0]}
+          {currentUser?.lastName[0]}
+        </div>
+      </div>
     </div>
   );
 }
