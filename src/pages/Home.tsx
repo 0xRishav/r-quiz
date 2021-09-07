@@ -20,8 +20,8 @@ const Home = () => {
     <div className="home">
       <Header />
       <div className="flex flex-col items-start mt-16">
-        <div className="text-3xl font-light">Hello,</div>
-        <div className="text-5xl font-semibold">{currentUser?.firstName}</div>
+        {/* <div className="text-3xl font-light">Hello,</div> */}
+        <div className="text-5xl font-semibold">Explore</div>
       </div>
       <div
         className="grid grid-cols-2 gap-16 mt-16"

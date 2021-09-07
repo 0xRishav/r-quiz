@@ -19,7 +19,7 @@ const Result = () => {
       <Header />
       <div className="flex flex-col justify-center mt-4">
         <h1 className="text-2xl font-semibold">
-          Congratulations {currentUser?.firstName}, you scored{" "}
+          Congratulations you scored{" "}
           <span className="text-green-600">{score}</span> out of 50
           <span className="">🎉</span>
         </h1>

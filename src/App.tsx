@@ -37,7 +37,7 @@ function App() {
     <div className="font-Poppins App w-5/6 m-auto md:w-4/6 xl:w-3/6 2xl:w-2/6">
       <Router>
         <Switch>
-          <Route exact path="/" component={isUserLoggedIn ? Home : Landing} />
+          <Route exact path="/" component={Home} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/react-quiz">
