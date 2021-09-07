@@ -12,9 +12,11 @@ type QuizDivPropTypes = {
   color: string;
   icon: any;
   position: any;
+  bg: string;
 };
 
 const QuizDiv = ({
+  bg,
   title,
   color,
   icon,
@@ -33,7 +35,8 @@ const QuizDiv = ({
 
   return (
     <div
-      className={`h-16 w-32 bg-${color}-400 relative rounded-lg z-10 flex justify-center items-center`}
+      style={{ backgroundColor: bg }}
+      className={`h-16 w-32 relative rounded-lg z-10 flex justify-center items-center`}
     >
       <Blob
         size="3rem"

@@ -29,6 +29,7 @@ const Home = () => {
       >
         <Link to="/javascript-quiz">
           <QuizDiv
+            bg="#f87171"
             position={{ top: "0", left: "-92%", right: "0", bottom: "-2%" }}
             title="JavaScript"
             color="red"
@@ -44,6 +45,7 @@ const Home = () => {
 
         <Link to="/react-quiz">
           <QuizDiv
+            bg="#60a5fa"
             position={{ top: "-2%", left: "0", right: "4%", bottom: "0" }}
             title="React"
             color="blue"
@@ -59,6 +61,7 @@ const Home = () => {
 
         <Link to="/nodejs-quiz">
           <QuizDiv
+            bg="#34d399"
             position={{ top: "0", left: "-2%", right: "0", bottom: "-2%" }}
             title="NodeJs"
             color="green"
@@ -74,6 +77,7 @@ const Home = () => {
 
         <Link to="/css-quiz">
           <QuizDiv
+            bg="#a78bfa"
             position={{ top: "-2%", left: "0", right: "-2%", bottom: "0" }}
             title="CSS"
             color="purple"
